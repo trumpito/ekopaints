@@ -1,0 +1,66 @@
+page-contractor {
+   .toolbar-background {
+        background-image: url('../assets/img/bg/contractor-bg.jpeg');
+    }
+    .content {
+        .list {
+            .item-input.input-has-focus {
+                 .label.usd {
+                    color: green  !important;
+                }
+            }
+             .item {
+                //font-size: 1.5em;
+                .input {
+                    input {
+                        text-align: left;
+                    }
+                }
+                 &.money{
+                     width:40%;
+                     margin: auto;
+                 }
+            }
+        }
+
+        .pictureAdd{
+            margin: auto;
+            margin-top:5px;
+            width:80vmin;
+            height:80vmin;
+            padding:1vmin;
+            text-align: center;
+            cursor: pointer;
+            img.placeHolder {
+                margin-top: 50px;
+                margin-bottom: 20px;
+                width: 50%;
+            }
+            border:solid 5px $pink;
+            border-radius: 10px;
+            color:#BBB;
+            &.hasPicture {
+                width:90vmin;
+                height:90vmin;
+                h3 {
+                    display: none;
+                }
+                img.placeHolder {
+                    display: none;
+                }
+                .picture{
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    border-radius: 5px;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
+        .sendBtn {
+            padding:25px;
+            font-size: 1.6em;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<!--
+  Generated template for the StylebookViewerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding [ngClass]="landscape? 'landscape' : ''">
+    <ion-slides pager zoom paginationType="progress" tappable (click)="toggleControls()" (ionSlideDidChange)="updateSlide()">
+        <ng-container *ngFor="let i of length">
+            <ion-slide>
+                <img src="./assets/stylebooks/{{title}}/large/{{i+1}}.jpg">
+            </ion-slide>
+        </ng-container>
+    </ion-slides>
+    <div class="controls" [ngClass]="showControls? '' : 'hidden'">
+        <div class="navControlBut prev" tappable (click)="previousSlide()" [ngClass]="isFirstSlide? 'hidden' : ''"><ion-icon name="ios-arrow-back"></ion-icon></div>
+        <div class="backButton" tappable (click)="goBack()"><span>Back</span></div>
+        <div class="navControlBut next" tappable (click)="nextSlide()" [ngClass]="isLastSlide? 'hidden' : ''"><ion-icon name="ios-arrow-forward"></ion-icon></div>
+    </div>
+</ion-content>

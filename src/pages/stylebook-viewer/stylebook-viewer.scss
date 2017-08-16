@@ -1,0 +1,78 @@
+page-stylebook-viewer {
+    .content {
+        background-color:#222;
+         .swiper-container{
+            .swiper-pagination {
+                top:initial;
+                bottom:0;
+                .swiper-pagination-progressbar{
+                    background-color:$pink;
+                }
+            }
+        }
+        &.landscape {
+            .swiper-container{
+                 .swiper-wrapper {
+                     .swiper-slide {
+                         img {
+                             height:100vh;
+                             width:auto;
+                         }
+                     }
+                 }
+            }
+         }
+        .controls {
+            pointer-events: none;
+            z-index: 10;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            display: flex;
+            justify-content: space-between;
+            color:$pink;
+            .navControlBut{
+                flex: 0 0 20%;
+                height: 100%;
+                //background-color:rgba(0,0,0,.5);
+                text-align: center;
+                cursor:pointer;
+                transition: opacity .5s;
+                .icon {
+                    line-height: 100vh;
+                    font-size:8em;
+                    filter: drop-shadow(0 0 3px rgba(0,0,0,.7));
+                }
+                &.hidden{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            .backButton {
+                margin-top:20px;
+                height: 50px;
+                font-size: 2.5em;
+                text-transform: uppercase;
+                filter: drop-shadow(0 0 3px rgba(0,0,0,.7));
+                cursor:pointer;
+                transition: opacity .5s;
+            }
+            & > * {
+                pointer-events: auto;
+            }
+            
+            &.hidden {
+                .navControlBut {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                .backButton{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

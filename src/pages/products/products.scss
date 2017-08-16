@@ -1,0 +1,75 @@
+.ios, .md, .wp {
+    page-products {
+        .toolbar-background {
+            background-image: url('../assets/img/bg/home-bg.jpeg');
+        }
+        .content {    
+            ion-scroll { white-space: nowrap;}
+            .scroll {
+                position:absolute;
+                top:50px;
+                bottom:0;
+                right:0;
+                left:0;
+                overflow-y: scroll;
+            }
+
+            .label{
+                white-space: normal;
+                & p {
+                   line-height: 1.7em; 
+                }
+            }
+            ion-thumbnail {
+                img{
+                    width:100px;
+                    height:100px;
+                    display: inline-block;
+                    filter:drop-shadow(0px 4px 3px rgba(0,0,0,.9));
+                }         
+                margin:0 !important;
+            }
+            /*ion-thumbnail:before {
+                display:block;
+                position:relative;
+                content: " ";
+                left:50%;
+                top:97px;
+                transform: translateX(-50%);
+                width:70px;
+                height:10px;
+                background-color:black;
+                filter:blur(7px);
+                z-index: -1;
+            }*/
+
+            .segment {
+                justify-content: space-around;
+                .segment-button{
+                    flex: 0 0 25%;
+                }
+            }
+            .item {
+                .item-inner {
+                    border-bottom-color:lighten($pink, 25%);
+                    p {
+                        color:grey;
+                    }
+                }
+            }  
+        }
+    }
+}
+
+.ios {
+    page-products {
+        .content{
+            margin-top: 5px;
+            .segment {
+                .segment-button {
+                   flex: 1 1 100%;
+                }
+            }
+        }
+    }
+}

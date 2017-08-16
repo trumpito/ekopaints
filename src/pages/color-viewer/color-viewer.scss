@@ -1,0 +1,75 @@
+page-color-viewer {
+    .header {
+        background: #333;
+        .toolbar-title{
+            margin: 10px;
+            color:white;
+            text-transform:capitalize;
+        }
+        .bar-buttons {
+            position:absolute;
+            top:0;
+            right:0;
+            transform: translateY(-15%);
+        }     
+    }
+    h3 {
+        color:#333;
+        font-size:1.8em;
+        padding:4px;
+    }
+    .color {
+        width:21.75vmin;
+        height: 21.75vmin;
+        max-width: 147px;
+        max-height: 147px;
+        display: inline-block;
+        border-radius: 8px;
+        position: relative;
+        font-size:1.2em;
+        font-weight: bold;
+        span:first-child{
+            display: none;
+        }
+        &.main {
+            width:44vmin;
+            height: 44vmin;
+            max-width: 300px;
+            max-height: 300px;
+            display: block;
+            margin: auto;
+            margin-bottom: 3px;
+            span:first-child{
+                display: inline;
+            }
+        }
+        .colorInfo{
+            position: absolute;
+            bottom:8px;
+            right:8px;
+            height: auto;
+            left:8px;
+        }
+    }
+    .complements {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        .complement-container {
+            flex: 0 0 50%;
+            .complement-wrapper {
+                display:block;
+                margin: auto;
+                width:45vmin;
+                max-width: 300px;
+                
+            }
+        }
+    }
+    .colorContainer {
+        padding:8px;
+    }
+    .content {
+        background-color:#EEE;
+    }
+}

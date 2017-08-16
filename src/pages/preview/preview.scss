@@ -1,0 +1,191 @@
+.app-root {
+    background-color: transparent !important;
+}
+
+.no-scroll .scroll-content{
+     overflow: hidden;
+}
+
+page-preview {
+    .header {
+        padding: 15px;
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        .toolbar-title {
+            text-align: right;
+            color:#CCC;
+            //padding-right: 20px;
+        }
+        .backBtn{
+            flex-basis:20vmin;
+            pointer-events: auto;
+            img {
+                height: 30px;
+            }
+            span {
+              font-size: 1.5em;   
+              position: absolute;
+              top: 4px;
+              left: 40px;
+              display: inline;
+              color:#CCC;
+            }
+            cursor: pointer;
+            transform: translateY(10%);
+        }
+    }
+    .toolbar-background {
+        background-color:transparent;
+    }
+    ion-content {
+        background-color: transparent !important;
+        pointer-events: none;
+       
+    }
+    canvas {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left:50%;
+    }
+    .backDrop {
+        background-color: #222;
+        position: absolute;
+        //pointer-events: none;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    .content {
+        //pointer-events: none;
+        .image{
+            width:100%;
+            height: 100%;
+        }
+        .topButtons {
+            *{
+               *{
+                   pointer-events: auto; 
+                }
+            }
+            display:flex;
+            justify-content: space-between;
+            width:50%;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            .mainBtn{
+                background-color:#333;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: relative;
+                cursor: pointer;
+                img {
+                    width: 60%;
+                    position: absolute;
+                    left:50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                } 
+                &:active {
+                    opacity: .6;
+                }
+            }
+            .projects {
+                .mainBtn{
+                    img{
+                        transform: translate(-50%, -45%);
+                    }
+                }
+            }
+            .projectColors {
+                &.hidden {
+                    div:not(:first-child){
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                div {
+                    transition: opacity .5s;
+                }
+            }
+            .color {
+                margin-top:5px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                &:nth-of-type(2){
+                    margin-bottom: 5px;
+                }
+                &.colorAdd {
+                    width:50px;
+                    height: 50px;
+                    border:solid #EEE 3px;
+                    text-align: center;
+                    color: #EEE;
+                    font-size: 2.3em;
+                    .icon{
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+        .botButtons {
+            display: flex;
+            justify-content: space-between;
+            width: 68%;
+            position: absolute;
+            left:50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            *{
+               pointer-events: auto; 
+            }
+            .btn {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: solid 3px #EEE;
+                align-self: center;
+                color:white;
+                cursor: pointer;
+                pointer-events: auto;
+                &.hidden{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                &.capture {
+                    width: 80px;
+                    height: 80px;
+                    &.filled{
+                        div{
+                            height:65px;
+                            width: 65px;
+                            background-color: #EEE;
+                            border-radius: 50%;
+                            position: absolute;
+                            top:50%;
+                            left:50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                }
+                &.clear, &.gallery{
+                    div {
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        .icon {
+                            line-height: 55px;
+                        }
+                    }
+                    font-size: 2.3em;
+                }
+            }
+        }
+    }
+}

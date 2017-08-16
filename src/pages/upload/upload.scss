@@ -1,0 +1,44 @@
+.upload-popover {
+    .popover-content {
+        transform-origin: center center !important;
+        width:auto;
+        page-upload {
+            .content {
+                background-color:#EEE;
+            } 
+            .options{
+                display: flex;
+                width: 85vmin;
+                margin: 10px;
+                max-width: 300px;
+                justify-content: space-between;
+                align-items: center;
+                .option {
+                    .icon{
+                        font-size: 5em;
+                        transform: translate(0,10%);
+                    }
+                    h3 {
+                        margin: 0;
+                        font-size: 1em;
+                        transform: translate(0,10%);
+                    }
+                    padding:5px;
+                    flex: 0 0 125px;
+                    height: 125px;
+                    border: solid lighten($pink, 20%) 7px;
+                    border-radius: 15px;
+                    text-align: center;
+                    color:darken($pink, 0%);
+                    cursor: pointer;
+                }
+                .or{
+                    text-transform: uppercase;
+                    font-weight: bold !important;
+                    color: #bbb;
+                    font-size:1.1em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<ion-content>
+    <ion-list>
+        <ion-list-header text-center>
+        Projects
+      </ion-list-header>
+        <ng-container *ngFor="let proj of projects">
+            <button ion-item (click)="selectProject(proj)">
+                <ion-thumbnail item-start>
+                    <img [src]="proj.pictures[0] != null? proj.pictures[0] : './assets/img/general/placeholder.jpg'">
+                </ion-thumbnail>
+                <ion-label>{{proj.name}}</ion-label>
+            </button>
+        </ng-container>
+        <ion-item *ngIf="projects.length < 1">
+            <ion-label text-center>No Projects Available</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,56 @@
+<!--
+  Generated template for the Preview page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <div class="backBtn" tappable (click)="goBack()">
+        <img src="./assets/img/icon/back.png" class="white-correct">
+        <span>Back</span>
+    </div>
+    <ion-title>Paint Preview</ion-title>
+</ion-header>
+<div class="backDrop" *ngIf="picture!=null || !noPreview"></div>
+<img class="image" [src]="picture" [hidden]="picture == null || true">
+<canvas #imgCanvas></canvas>
+<canvas #cannyCanvas [hidden]="!showCanny"></canvas>
+<canvas #colorCanvas></canvas>
+<canvas #drawCanvas (mousedown)="picture!= null && this.color!=null? setDraw($event) : ''" (mousemove)="picture!= null && this.color!=null? draw($event): ''" (mouseup)="picture!= null && this.color!=null? calculateFill(): ''" (touchstart)="picture!= null && this.color!=null? setDraw($event) : ''" (touchmove)="picture!= null && this.color!=null? draw($event): ''" (touchend)="picture!= null && this.color!=null? calculateFill(): ''">
+</canvas>
+<ion-content padding class="no-scroll">
+    <div class="topButtons" >
+        <div class="colors">
+            <div class="mainBtn" tappable (click)="openColorPopover()">
+                <img class="white-correct" src="./assets/img/icon/pantone.png">
+            </div>
+        </div>
+        <div class="projects">
+            <div class="mainBtn" tappable (click)="openProjectPopover($event)">
+                <img src="./assets/img/icon/addproject.png">
+            </div>
+        </div>
+        <div class="projectColors" [ngClass]="showColors? '': 'hidden'">
+            <div class="mainBtn" #projectBtn tappable (click)="toggleColors()">
+                <img src="./assets/img/icon/palette.png">
+            </div>
+             <div class="color" [style.background-color]="color?.asHex" [hidden]="color == null"></div>
+             <div class="color colorAdd" [hidden]="color != null" tappable (click)="openColorPopover()">
+                <ion-icon name="add"></ion-icon>
+             </div>
+             <div class="divider" [hidden]="colorHistory.length < 1"></div>
+            <ng-container *ngFor="let col of colorHistory">
+                <div class="color" [style.background-color]="col.asHex" tappable (click)="selectColor(col)"></div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="botButtons">
+        <div class="btn gallery" tappable (click)="checkGalleryPermissions()">
+            <div><ion-icon name="image"></ion-icon></div>
+        </div>
+        <div class="btn capture" [ngClass]="picture!=null? 'filled': ''" tappable (click)="picture!=null? clearPic() : takePicture()"><div></div></div>
+        <div class="btn clear" [style.background-color]="color?.asHex" [ngClass]="!hasPaint? 'hidden': ''" tappable (click)="clearPaint()">
+            <div><ion-icon name="close"></ion-icon></div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Convert text to JSON</title>
+        <script type="application/javascript">
+            function convert(){
+                var skeleton = {
+                    "title": "",
+                    "description": "",
+                    "features": [],
+                    "img": ""
+                };
+                var input = document.getElementById("input");
+                var output = document.getElementById("output");
+                var text = input.value.split("\n");
+                skeleton.title=text[0];
+                skeleton.description=text[1];
+                for(var i = 2; i<text.length; i++){
+                    if(text[i].length!=0 && text[i]!=" "){
+                        skeleton.features.push(text[i]);
+                    }  
+                }
+                
+                output.value=JSON.stringify(skeleton, null, 4);
+                
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="input" width="200" height="600"></textarea>
+        <button id="button" onclick="convert()">Convert</button>
+        <textarea id="output" width="200" height="600"></textarea>
+        
+    </body>
+</html>

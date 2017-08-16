@@ -1,0 +1,35 @@
+<!--
+  Generated template for the Stylebooks page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="main-header fix-content">
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon><img src="./assets/img/icon/menu.png"></ion-icon> &nbsp;&nbsp;Menu
+    </button>
+      <button ion-button clear medium icon-only [navPush]="previewPage">
+        <ion-icon><img src="./assets/img/icon/photo-camera.png"></ion-icon>
+      </button>
+    <ion-title text-center>Style Books</ion-title>
+    <div class="toolbar-circle">
+        <img class="toolbar-circle-img white-correct" src="./assets/img/icon/open-book.png">   
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+     <ion-grid text-center>
+         <ion-row>
+             <ng-container *ngFor="let book of stylebooks">
+                    <ion-col col-6>
+                        <img src="./assets/stylebooks/{{book.title}}/tablet/1.jpg" class="stylebook" tappable (click)="openBook(book)">
+                    </ion-col>
+             </ng-container>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,53 @@
+page-calculator {
+    .toolbar-background {
+        background-image: url('../assets/img/bg/calculator-bg.jpeg');
+    }
+
+    .content {
+        ion-label{
+            -webkit-align-self:center;
+            align-self:center;
+            
+        }
+        ion-input{
+            input{
+                text-align: center;
+            }
+        }
+        .wrapper {
+            width:33vmin;
+            margin: auto;
+        }
+        .gallonTxt {
+            margin-top: 40px;
+            padding:0 40px;
+            font-size: 1.5em;
+        }
+        
+    }
+}
+
+.widget {
+    page-calculator{
+        .header {
+            background: #333;
+            .toolbar-title{
+                margin: 10px;
+                color:white;
+                text-transform:capitalize;
+            }
+            .bar-buttons {
+                position:absolute;
+                top:0;
+                right:0;
+                transform: translateY(-15%);
+            }
+        } 
+        .wrapper {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}

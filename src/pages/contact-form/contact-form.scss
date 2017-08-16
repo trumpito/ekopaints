@@ -1,0 +1,30 @@
+page-contact-form {
+    .header {
+        background: $pink; 
+        .toolbar-title{
+            margin: 10px;
+            color:white;
+            text-transform: uppercase;
+        }
+        .bar-buttons {
+            position:absolute;
+            top:0;
+            right:0;
+            transform: translateY(-15%);
+        }
+        
+    }
+    .content {
+        .list {
+            .item{
+                .item-inner{
+                    .label{
+                        font-size:1em;
+                        white-space: normal;
+        
+                    }
+                }
+            }
+        }
+    }
+}

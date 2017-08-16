@@ -1,0 +1,104 @@
+<!--
+  Generated template for the Projects page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="main-header fix-content">
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon><img src="./assets/img/icon/menu.png"></ion-icon> &nbsp;&nbsp;Menu
+    </button>
+      <button ion-button clear medium icon-only [navPush]="previewPage" *ngIf="!viewProject">
+        <ion-icon><img src="./assets/img/icon/photo-camera.png"></ion-icon>
+      </button>
+    <ion-title text-center>Projects</ion-title>
+    <div class="toolbar-circle">
+        <img *ngIf="viewProject" class="toolbar-circle-img white-correct" src="./assets/img/icon/folder.png">  
+        <button class="addBtn" *ngIf="!viewProject" ion-button clear color="light" large icon-only (click)="openAddProjectModal()"><ion-icon name="ios-add"></ion-icon></button>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+<span class="addTxt" *ngIf="!viewProject" tappable (click)="openAddProjectModal()">Add Project</span>
+<ion-content padding>
+    <ng-container *ngIf="viewProject">
+        <h1 text-center>{{project.name}}</h1>
+        <div class="projectSize">
+            <h4 text-center tappable (click)="toggleCalc()">{{project.size}} <small>Sq. Ft.</small></h4>
+            <button ion-button (click)="openCalculator()" small clear [hidden]="!showCalc"><img class="" src="./assets/img/icon/calculator.png"></button>
+        </div>
+        <div class="pictures">
+            <div class="arrows">
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </div>
+            <ion-slides pager centeredSlides="true" paginationType="bullets" effect="coverflow">
+                <ng-container *ngFor="let pic of project.pictures">
+                    <ion-slide>
+                        <img [src]="pic" tappable (click)="toggleDelete(pic)">
+                        <button class="deletePicBtn" ion-button large icon-only *ngIf="delete == pic" (click)="deletePic(pic)" clear><ion-icon name="trash"></ion-icon></button>
+                        
+                    </ion-slide>
+                </ng-container>
+                <ng-container *ngIf="project.pictures.length <= 0">
+                    <ion-slide>
+                        <img src="./assets/img/general/placeholder.jpg">
+                    </ion-slide>
+                </ng-container>
+            </ion-slides>
+            <div class="arrows">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </div>
+        </div>
+        <h3 text-center>Colors</h3>
+        <div class="colorContainer">
+            <ng-container *ngFor="let col of project.colors">
+                <div  class="color"  [style.background-color]="'#'+col.hex" tappable (click)="openPopover(col)">
+                    <div class="colorInfo" [style.color]="col.contrastColor== 'dark'? '#333': '#EEE'">
+                         <span>{{col.name}}</span> <br>
+                        <span>{{col.number}}</span>
+                    </div>  
+                </div>
+            </ng-container>
+            <ng-container *ngIf="project.colors.length <= 0">
+                <h3 text-center>No Colors Yet.</h3>
+            </ng-container>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!viewProject" >
+            <ion-grid *ngIf="projects.length > 0">
+            <ng-container *ngFor="let project of projects">
+                <ion-row  text-center class="project" tappable (click)="openProjectDetail(project)">
+                    <ion-col col-9>
+                        <h3>{{project.name}}</h3>
+                        <div class="picture" [style.backgroundImage]="project.pictures[0]? 'url('+project.pictures[0]+')' : 'url(./assets/img/general/placeholder.jpg)'"></div>
+                    <!-- <img [src]="project.pictures[0] || './assets/img/general/placeholder.jpg'"> -->
+                    </ion-col>
+                    <ion-col col-3>
+                        <div class="project-details">
+                            <h3>Colors</h3>
+                            <h3>{{project.colors.length}}</h3>
+                            <div class="divider" style="width:60px;"></div>
+                            <h3>Photos</h3>
+                            <h3>{{project.pictures.length}}</h3>
+                            <div class="divider" style="width:60px;"></div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ng-container>
+        </ion-grid>
+        <div class="emptyText" text-center *ngIf="projects.length == 0">
+            <h3>
+            Looks like you don't have any projects. 
+            </h3>
+            <h3>
+                Go ahead and <a (click)="openAddProjectModal()">create</a> one.
+            </h3>
+        </div>
+    </ng-container>
+</ion-content>
+<ion-footer *ngIf="viewProject">
+    <button color="danger" full ion-button class="deleteBtn" (click)="deleteProject()">Delete Project</button>
+</ion-footer>

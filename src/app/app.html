@@ -1,0 +1,18 @@
+<ion-menu class="menu" [content]="content" type="overlay">
+  <ion-header class="menu-header">
+      <button menuClose large icon-only clear ion-button><ion-icon name="close"></ion-icon></button>
+      <button menuClose large clear ion-button (click)="openContractorRewards()" [class.activePage]="checkActive(contractorPage)" >Contractor</button>
+  </ion-header>
+
+  <ion-content>
+    <ion-list padding>
+      <button menuClose ion-item *ngFor="let p of pages" [class.activePage]="checkActive(p)" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

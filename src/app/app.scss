@@ -1,0 +1,263 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$input-label-color: $pink;
+// Slant Header
+.header.main-header{
+    .toolbar-background{
+        border:none;
+        background-size: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% $header-slant-pos, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% $header-slant-pos, 0% 100%);
+        &:before {
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(0,0,0,.3);
+        }
+    }
+    .toolbar, .toolbar-md, .toolbar-ios, .toolbar-wp {
+        display: block;
+        font-weight: normal;
+        .back-button {
+            z-index: 10;
+            .button-inner {
+                .back-button-icon {
+                    &::before {
+                        content:url('../assets/img/icon/back.png');
+                    }
+                    margin-top:35px;
+                    transform-origin: left center;
+                    transform: scale(.3);
+                    filter: invert(1);
+                }
+                .back-button-text{
+                    display:none;
+                }
+            }
+        }
+        .toolbar-content {
+            position: absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            .toolbar-title {
+                color:white;
+                font-size:32px;
+                font-weight: 200;
+                position: absolute;
+                top:$toolbar-md-height/2 - 0px;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            .button {
+                position: absolute;
+                right:7px;
+                top:20px;
+               //display:none;
+            }
+            .toolbar-circle{
+                width:65px;
+                height:65px;
+                border-radius: 50%;
+                background-color:$pink;
+                position: absolute;
+                right:25px;
+                top:$toolbar-md-height * .75 - 30px;
+                text-align: center;
+                .toolbar-circle-img {
+                    color:white;
+                    line-height:65px;
+                    font-size:55px;
+                }
+                img.toolbar-circle-img {
+                    height:43px;
+                    width:43px;
+                    position:absolute;
+                    top:50%;
+                    transform:translate(-50%, -50%);
+                }
+            }
+            .icon {
+                img {
+                    width:25px;
+                    height:25px;
+                    filter: invert(100%);
+                    transform:translate(0, -10%);
+                }
+            }
+        }
+        
+        
+        .bar-buttons {
+            color:white;
+            text-transform: initial;
+            font-size:1.3em;
+            position: absolute;
+            top: 30px;
+            left: 7px;
+            font-weight: 100;
+            .icon {
+                img {
+                    width:17px;
+                    height:17px;
+                    transform: translateY(-5%);
+                }
+            }
+        }
+        
+    }
+    filter:drop-shadow(0px 1px 3px rgba(0,0,0,.9))
+}
+
+.header.main-header::after {
+           display:none; 
+} 
+
+.header.main-header.fix-content ~ .content {
+    .scroll-content, .fixed-content {
+        margin-top: .75 * $toolbar-md-height !important;
+        & > *:first-child {
+            margin-top: .25 * $toolbar-md-height;
+        }
+    }  
+   
+}
+
+.white-correct {
+    filter: invert(100%);
+}
+// End Slant Header
+
+.menu {
+    .menu-inner {
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            button {
+                transition: opacity .2s;
+                margin: 20px 0 0 20px;
+                color:white;
+                &.activePage {
+                    opacity: .4;
+                }
+            }
+            &::after {
+                display:none;
+            }
+        }
+        .content {
+            background-image:url('../assets/img/bg/menu-bg.jpeg');
+            background-size: cover;
+            .scroll-content {
+                padding-top: $toolbar-md-height - 125px;
+                .list {
+                    button.item {
+                        background:transparent;
+                        color:white;
+                        font-size:1.6em;
+                        font-weight: 200;
+                        transition: opacity .2s;
+                        .item-inner {
+                            border:none;
+                        }
+                        &.activePage {
+                            opacity: .4;
+                        }
+                        
+                    }
+                }
+            }
+            &::before {
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color: rgba(0,0,0,.8);
+            }
+        }
+       
+    }
+    
+}
+
+.divider{
+    background-color:$pink;
+    height:3px;
+    width:40px;
+    margin:auto;
+}
+
+   .ios{
+        h1,h2,h3,h4,h5,h6,span, p, * {
+            font-weight: 200 !important;
+        }
+    }
+    .md, .wp {
+        h1,h2,h3,h4,h5,h6,span, p, * {
+            font-weight: 100 !important;
+        }
+    }
+
+.content {
+
+    .list{
+        .item-input.input-has-focus{
+
+        }
+        .item-input {
+            .label{
+                transform-origin: center top;
+            }
+            &.input-has-value{
+                .item-inner {
+                    border-bottom-color: $input-label-color !important;
+                    box-shadow: inset 0 -1px 0 0 $input-label-color !important;
+                }
+                &:last-child{
+                    box-shadow:  inset 0 -1px 0 0 $input-label-color !important;
+                   border-bottom-color: $input-label-color !important;
+                }
+            }
+            
+            &.input-has-focus {
+                .label {
+                    color:$input-label-color;
+                }
+                .item-inner {
+                    border-bottom-color:$input-label-color;
+                    box-shadow: inset 0 -1px 0 0 $input-label-color;
+                }
+            }
+        }
+        & .item-input.input-has-focus:last-child{
+            border-bottom-color:$input-label-color;
+            box-shadow: inset 0 -1px 0 0 $input-label-color;
+            .item-inner {
+                box-shadow: none;
+            }
+        } 
+    } 
+}
+
+

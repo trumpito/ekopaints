@@ -1,0 +1,78 @@
+<!--
+  Generated template for the Colors page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="main-header fix-content" *ngIf="!asPopover">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon><img src="./assets/img/icon/menu.png"></ion-icon> &nbsp;&nbsp;Menu
+    </button>
+      <button ion-button clear medium icon-only [navPush]="previewPage" *ngIf="showFamilies">
+        <ion-icon><img src="./assets/img/icon/photo-camera.png"></ion-icon>
+      </button>
+    <ion-title text-center>{{showFamilies? "Choose A Color": family.toUpperCase()}}</ion-title>
+    <div class="toolbar-circle">
+        <img class="toolbar-circle-img white-correct" src="./assets/img/icon/pantone.png">    
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-header #header *ngIf="asPopover && !showFamilies">
+    <div class="backBtn" tappable (click)="goBack()">
+        <img src="./assets/img/icon/back.png" class="white-correct">
+        <span>Back</span>
+    </div>
+    <ion-title>{{family.toUpperCase()}}</ion-title>
+</ion-header>
+<ion-content>
+    <ng-container *ngIf="showFamilies; else familyColors">
+        <div class="search">
+            <ion-searchbar animated="true" (ionInput)="getColors($event)" (ionCancel)="clearColors()"></ion-searchbar>
+        </div>
+        <div class="choose" text-center *ngIf="searchColors == null">
+            <span class="dash"> - </span><span class="or">or</span><span class="dash"> - </span>
+        </div>
+        <div class="families" *ngIf="searchColors == null">
+            <h3 text-center>Choose Color Family</h3>
+            <div class="divider"></div>
+            <ion-grid class="colors">
+                 <ng-container *ngFor="let row of families">
+                    <ion-row>
+                        <ng-container *ngFor="let color of row">
+                            <ion-col> 
+                                <div class="splotch {{color}}" tappable (click)="selectFamily(color)">
+                                    <img src="./assets/img/general/splotch/{{color}}.png"> 
+                                    <span>{{color}}</span>
+                                </div>
+                            </ion-col>
+                        </ng-container>
+                    </ion-row>
+                </ng-container>   
+            </ion-grid>
+        </div>
+        <div class="searchResults" *ngIf="searchColors != null">
+            <ion-grid class="searchColors">
+            <ion-row>
+                <ng-container *ngFor="let color of searchColors">
+                    <ion-col>
+                        <div class="color" [style.backgroundColor]="sanitizeColor(color.hex)" tappable (click)="asPopover? dismiss(color) : openPopover(color)"></div>
+                    </ion-col>
+                </ng-container>
+            </ion-row>
+        </ion-grid>
+        </div>
+    </ng-container>
+    <ng-container id="familyColors">
+        <ion-grid class="familyColors">
+            <ion-row>
+                <ng-container *ngFor="let color of colors">
+                    <ion-col>
+                        <div class="color" [style.backgroundColor]="sanitizeColor(color.hex)" tappable (click)="asPopover? dismiss(color) : openPopover(color)"></div>
+                    </ion-col>
+                </ng-container>
+            </ion-row>
+        </ion-grid>
+    </ng-container>
+</ion-content>

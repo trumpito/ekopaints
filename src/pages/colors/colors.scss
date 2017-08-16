@@ -1,0 +1,154 @@
+page-colors {
+     .toolbar-background {
+        background-image: url('../assets/img/bg/color-bg.jpeg');
+    }
+    .content {    
+        background-color: #d0cece;
+        padding:20px;
+        .searchbar {
+            width: 90%;
+            margin:auto;
+        }
+        .choose{
+            font-size:1.5em;
+            color:#888;
+            .dash{
+                color:$pink;
+            }
+        }
+    }
+    .colors {
+        .splotch {
+            span {
+                text-transform: uppercase;
+                position: absolute;
+                color:white;
+                font-size: 4vw;
+                top:50%;
+                left:50%;
+                transform: translate(-55%,-70%);
+                //filter:drop-shadow(0 0 7px rgba(0,0,0,1));
+                background-color:rgba(0,0,0,.1);
+                width:75%;
+                letter-spacing: 1px;
+            }
+            &:active {
+                transform-origin: center center;
+                transform: scale(.9);
+            }
+            cursor: pointer;
+        }
+    }
+    .col{
+        padding:0;
+        text-align: center;
+        flex-basis: 43px;
+    }
+    .row {
+       padding: 0 4%;
+    }
+    .familyColors, .searchColors {
+        .col {
+            flex-grow: 0;
+            margin:1px;
+        }
+    }
+    .color {
+        width:43px;
+        height:43px;
+        filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    
+}
+
+.choose-color {
+    .popover-content {
+        transform-origin: center center !important;
+         page-colors {
+            .content{
+                padding:0;
+                .colors{
+                    .splotch {
+                        span {
+                            letter-spacing: -1px;
+                            font-size:3.5vw;
+                        }
+                    }
+                }
+            }
+        }   
+        max-height: 400px;
+    }
+    &.colors {
+        .popover-content {
+            width:77.5vw;
+            .header {
+                top:0;
+                left:0;
+                background-color:#333;
+                padding: 15px;
+                display: flex;
+                .toolbar-title {
+                    text-align: right;
+                    color:#CCC;
+                    //padding-right: 20px;
+                }
+                .backBtn{
+                    flex-basis: 20vmin;
+                    img {
+                        height: 30px;
+                    }
+                    span {
+                      font-size: 1.5em;   
+                      position: absolute;
+                      top: 4px;
+                      left: 40px;
+                      color:#CCC;
+                    }
+                    cursor: pointer;
+                    transform: translateY(10%);
+                }
+            }
+            height:60vh;
+            max-height: 400px;
+        }
+    }
+}
+
+.color-popover {
+    .popover-content {
+        width:auto !important;
+        border-radius: 8px !important;
+        transform-origin: center center !important;
+    }
+}
+
+
+.colorBox {
+    background-color: #DFDFDF;
+    display: inline-block;
+    width:160px;
+    height:215px;
+    .colorButtons {
+        height:60px;
+        display:flex;
+        justify-content: space-between;
+    }
+    .colorSquare {
+        width:150px;
+        height:150px;
+        margin: auto;
+        background-color: aqua;
+        border-radius: 4px;
+        .colorInfo {
+            padding:10px;
+            position: absolute;
+            bottom:0;
+            color:#333;
+            opacity: .9;
+        }
+    }                
+}

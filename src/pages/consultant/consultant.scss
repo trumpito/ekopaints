@@ -1,0 +1,52 @@
+page-consultant {
+    .toolbar-background {
+        background-image: url('../assets/img/bg/consultant-bg.jpeg');
+    }
+    .toolbar {
+        .toolbar-circle {
+            display:none;
+        }
+    }
+    .content {    
+        .infoBox{
+            margin:10px;
+            .info-image{
+                background-color:$pink;
+                border-radius: 50%;
+                display:inline-block;
+                height:75px;
+                width:75px;
+                img{
+                    height:50px;
+                    width:50px;
+                    transform: translateY(15%);
+                }
+            }
+            p {
+                font-size:1.3em;
+            }
+            h2 {
+                font-weight: 200;
+            }
+        }
+        
+        .grid {
+            .row{
+                .col{
+                    min-height: initial;
+                        
+                }
+                .colDivider {
+                    background-color: lightgrey;
+                    flex-basis: 2px;
+                }
+                @media (max-width: 375px){
+                    flex-direction: column;
+                }
+            }
+        }
+         button {
+             margin-top:10%;
+        }
+    }
+}

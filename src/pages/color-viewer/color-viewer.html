@@ -1,0 +1,64 @@
+<!--
+  Generated template for the ColorViewerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-title text-center color="light">
+        {{color.name}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()" large clear>
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon color="light" name="md-close" hideWhen="ios"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-header>
+<ion-content>
+    <h3 text-center>{{color.family}} Family</h3>
+    <div class="complements">
+         <ng-container *ngFor="let colo of color.details.harmony">
+            <div class="complement-container">
+                <div class="color main" [style.background-color]="'#'+color.hex">
+                    <div class="colorInfo" [style.color]="color.contrastColor== 'dark'? '#333': '#EEE'">
+                         <span>{{color.name}}</span> <br>
+                        <span>{{color.number}}</span>
+                    </div>  
+                </div>
+                <div class="complement-wrapper">
+                    <ng-container *ngFor="let col of colo.colors">
+                        <div  class="color"  [style.background-color]="'#'+col.hex" tappable (click)="openPopover(col)">
+                            <div class="colorInfo" [style.color]="col.contrastColor== 'dark'? '#333': '#EEE'">
+                                 <span>{{col.name}}</span> <br>
+                                <span>{{col.number}}</span>
+                            </div>  
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <h3 text-center>Similar Colors</h3>
+        <div class="colorContainer">
+        <ng-container *ngFor="let col of color.details.similar.colors">
+            <div  class="color"  [style.background-color]="'#'+col.hex" tappable (click)="openPopover(col)">
+                <div class="colorInfo" [style.color]="col.contrastColor== 'dark'? '#333': '#EEE'">
+                     <span>{{col.name}}</span> <br>
+                    <span>{{col.number}}</span>
+                </div>  
+            </div>
+        </ng-container>
+    </div>
+    <h3 text-center>Shades</h3>
+    <div class="colorContainer">
+        <ng-container *ngFor="let col of color.details.shades.colors">
+            <div  class="color"  [style.background-color]="'#'+col.hex" tappable (click)="openPopover(col)">
+                <div class="colorInfo" [style.color]="col.contrastColor== 'dark'? '#333': '#EEE'">
+                     <span>{{col.name}}</span> <br>
+                    <span>{{col.number}}</span>
+                </div>  
+            </div>
+        </ng-container>
+    </div>
+</ion-content>

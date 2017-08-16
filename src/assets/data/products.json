@@ -1,0 +1,421 @@
+{
+    "products": [
+        {"title":"interior", 
+         "paints": [
+            {
+                "title": "ADVANCE® Waterborne Interior Alkyd Paint",
+                "name": "ADVANCE® Interior Paint",
+                "description": "A premium quality, waterborne alkyd paint that offers a full line of durable high-end finishes ideal for doors, trim and cabinetry.",
+                "features": [
+                    "Exceptional application and feel",
+                    "Outstanding coverage and hide",
+                    "Cures to a hard, furniture-quality finish",
+                    "Tinted with Benjamin Moore’s proprietary waterborne colorants",
+                    "Low VOC even after tinting",
+                    "Available in over 3,500 colors"
+                ],
+                "img": "advancesg.png"
+            },
+            {
+                "title": "Aura® Bath & Spa Waterborne Interior Paint",
+                "name": "Aura® Bath And Spa Paint",
+                "description": "Aura Bath & Spa is a luxurious matte finish designed for high-humidity environments.",
+                "features": [
+                    "Ideal for high-humidity environments such as bathrooms and spas",
+                    "Extreme hide and coverage for fewer coats",
+                    "Mildew resistant for a fresh look that lasts",
+                    "Proprietary Color Lock® technology for richer colors that stay true over time",
+                    "Stands up to repeated washing with no color rub-off",
+                    "Paint and primer together",
+                    "Zero VOC*, low odor",
+                    "***Only comes in the Matte finish"
+                ],
+                "img": "aurabs.png"
+            },
+            {
+                "title": "Natura® Zero-VOC and Zero Emissions Paint",
+                "name": "Natura® Paint",
+                "description": "Natura Waterborne Interior Paint is Benjamin Moore's greenest paint.",
+                "features": [
+                    "Now Certified asthma & allergy friendly™",
+                    "Zero VOC*",
+                    "Zero Emissions (measured at 4 hours after application)**",
+                    "Quick return to service",
+                    "100% Acrylic",
+                    "Provides a durable, washable film",
+                    "Spatter-resistant",
+                    "Unlimited color selection",
+                    "One hour recoat for quick return to service",
+                    "Self-priming on most surfaces",
+                    "Voted 2015 Product of the Year†",
+                    "***Comes in flat, egg shell and semi-gloss finish"
+                  ],
+                "img": "naturaf.png"
+            },
+            {
+                "title": "Regal® Select Waterborne Interior Paint",
+                "name": "Regal Select Interior Paint",
+                "description": "Regal Select Interior has been a trusted brand for more than 50 years and is formulated for easy cleaning in a wide variety of sheens.",
+                "features": [
+                "Stain release technology that is easy to clean with less scrubbing",
+                "Excellent hide and coverage for a uniform finish",
+                "Applies easily and smoothly",
+                "Paint and primer together",
+                "Mildew resistant",
+                "Ideal for busy areas such as kitchens, hallways, family rooms",
+                "Zero VOC*, low odor",
+                "***Comes in flat, matte, egg shell, pearl, and semi gloss finish"
+              ],
+                "img": "regalselectm.png"
+            },
+            {
+                "title": "ben® Zero-VOC Paint",
+                "name": "ben® Interior Paint",
+                "description": "ben Interior is user-friendly paint for flawless results and puts premium color within reach.",
+                "features": [
+                "Formulated for an easy painting experience",
+                "Delivers a smooth finish with great touch-up characteristics",
+                "Excellent flat finish for ceilings and low traffic areas",
+                "Spatter resistant with easy clean-up",
+                "Zero VOC*, low odor",
+                "Paint and primer together",
+                "Available in thousands of colors",
+                "***This comes in flat, egg shell, semi gloss"
+              ],
+                "img": "bensg.png"
+            },
+            {
+                "title": "Benjamin Moore Chalkboard Paint",
+                "name": "Benjamin Moore Chalkboard Paint",
+                "description": "Chalkboard Paint, available in any color, lets you turn virtually any interior surface into an erasable chalkboard.",
+               "features": [
+                "Easy to apply",
+                "Can be applied to new or previously painted interior surfaces",
+                "Available in thousands of colors",
+                "Cleans easily",
+                "Fast drying",
+                "Zero VOC*, low odor",
+                "***comes in egg-shell finish"
+              ],
+                "img": "chalkboard.png"
+            },
+            {
+                "title": "Floor & Patio Latex Enamels",
+                "name": "Floor & Patio Latex Enamels",
+                "description": "A premium quality, quick-drying latex floor enamel with great color and gloss retention that can be used for interior or exterior surfaces.",
+                "features": [
+                "Easy application – Goes on Smoothly",
+                "Resistant to soaps and detergents, grease and oil",
+                "Durable Finish – Resists marring and scratching and delivers lasting finish",
+                "Low Odor/Low VOC – Environmentally friendly",
+                "Interior/Exterior Use – Can be used over multiple substrates",
+                "***Comes in enamel finish"
+              ],
+                "img": "floorpatiohg.png"
+            },
+            {
+                "title": "Impervex® Latex High Gloss Enamel",
+                "name": "Impervex® Latex High Gloss",
+                "description": "Quick-drying, high gloss enamel providing outstanding rust inhibition with excellent color retention and weather resistance.",
+                "features": [
+                "For exterior or interior use",
+                "100% Acrylic",
+                "Excellent gloss & colour retention",
+                "Excellent adhesion",
+                "Tough durable film",
+                "Soap-and-water cleanup",
+                "Fast drying time",
+                "***comes in enamel high gloss"
+              ],
+                "img": "impervexhg.png"
+            },
+            {
+                "title": "Benjamin Moore Kitchen and Bath Paint",
+                "name": "Kitchen & Bath Paint",
+                "description": "Kitchen & Bath is a premium quality satin finish enamel designed to resist mildew growth in kitchens and bathrooms.",
+                "features": [
+                "Applies easily and smoothly",
+                "Exceptional durability and color retention",
+                "Mildew resistant even under humid conditions",
+                "Self priming on most surfaces",
+                "Low VOCs and low odor",
+                "***Only comes in satin finish"
+              ],
+                "img": "kitchenandbaths.png"
+            },
+            {
+                "title": "Muresco Ceiling Paint",
+                "name": "Muresco Ceiling Paint",
+                "description": "Muresco Ceiling Paint is formulated for ceilings and will provide a beautiful, uniform flat finish.",
+                "features": [
+                "Features solid hiding and easy application",
+                "Resists spattering when applied with a roller",
+                "Tones down ceiling glare and provides maximum diffused light.",
+                "Provides a beautiful uniform flat finish",
+                "***comes in flat finish"
+              ],
+                "img": "murescof.png"
+            },
+            {
+                "title": "Regal® Classic Premium Interior Paint",
+                "name": "Regal Interior Paint",
+                "description": "Regal Classic is a premium quality paint that offers beautiful color and durability.",
+                "features": [
+                "Uses Advanced Particle Technology, featuring our proprietary 100% acrylic resin",
+                "Easy to clean with less scrubbing",
+                "Mildew resistant",
+                "Good touch-up characteristics",
+                "Traditional flat finish for moderate-traffic areas and ceilings",
+                "***comes in flat,matte,pearl,egg shell, semi gloss"
+              ],
+                "img": "regalclassicp.png"
+            },
+            {
+                "title": "Satin Impervo Alkyd Low Lustre Paint",
+                "name": "Satin Impervo",
+                "description": "A premium quality, low lustre, alkyd paint with superb leveling and hiding qualities.",
+                "features": [
+                "Excellent sag resistance",
+                "Easy to apply with brush, roller or spray gun",
+                "Covers surfaces in one coat, provided they are in good repaint condition and color change is not extreme",
+                "***comes in satin"
+              ],
+                "img": "satinimpervos.png"
+            },
+            {
+                "title": "Benjamin Moore Studio Finishes®",
+                "name": "studio finishes®",
+                "description": "Studio Finishes are creative glazes, metallics, faux finishes and unique effects that transform surfaces into works of art.",
+                "features": [
+                "A topcoat that turns virtually any interior surface into a chalkboard",
+                "Applies easily and is washable",
+                "Spatter resistant",
+                "Dries quickly to a decorative finish that is extremely durable",
+                "Formulated to minimize lingering odors",
+                "***Comes in eggshell, flat, semi-gloss, low lustre, high gloss, "
+              ],
+                "img": "finishesg.png"
+            },
+            {
+                "title": "Benjamin Moore Waterborne Ceiling Paint",
+                "name": "Waterborne Ceiling Paint",
+                "description": "Waterborne Ceiling Paint is an ultra flat finish designed to hide common ceiling imperfections for a look that is virtually flawless.",
+                "features": [
+                "Superior hide for a flawless finish",
+                "Flattest finish offered by Benjamin Moore",
+                "Conceals common surface imperfections",
+                "Easy application with fantastic results",
+                "Ample open time ensure minimal lapping",
+                "Formulated for minimal spatter",
+                "Zero VOC*",
+                "***comes in ultra flat"
+              ],
+                "img": "ceilingpaintuf.png"
+            },
+            {
+                "title": "Waterborne Satin Impervo® Paint",
+                "name": "Waterborne Satin Impervo®",
+                "description": "Waterborne Satin Impervo is a premium quality 100% acrylic latex that is now tinted with our patented zero-VOC Gennex® colorants.",
+                "features": [
+                "Excellent hide",
+                "Superior durability",
+                "Proprietary Gennex® colorant system",
+                "High scrub finish",
+                "Excellent flow and leveling properties",
+                "Easy application and clean up",
+                "Minimal yellowing",
+                "Spatter-resistant",
+                "Block reistant",
+                "Recommended for:",
+                "Doors, trim, furniture, cabinets and shelving",
+                "Comes in satin"
+              ],
+                "img": "waterbournesatinimpervos.png"
+            }    
+        ]},
+        {"title":"exterior", 
+         "paints": [
+            {
+                "title": "Aura® Grand Entrance®",
+                "name": "Aura® Grand Entrance®",
+                "description": "Aura Grand Entrance brings rich, vivid color and exceptional durability to your interior/exterior doors and trim.",
+                "features": [
+                    "Rich, lustrous finish",
+                    "Excellent color retention and fade resistance",
+                    "Easy, smooth application",
+                    "For interior & exterior use",
+                    "Lifetime Limited Warranty"
+                ],
+                "img": "aurages.png"
+            },
+            {
+                "title": "Aura® Waterborne Interior/Exterior Color Foundation",
+                "name": "Aura® Color Foundation",
+                "description": "Aura Color Foundation is intended as a base coat, when needed, to achieve certain desired colors.",
+                "features": [
+                    "Base coat for Aura paint when needed",
+                    "Hides surface flaws and dark colors",
+                    "Creates a smooth finish",
+                    "Quick drying",
+                    "Can be applied over latex or oil finishes",
+                    "Spatter resistant"
+                ],
+                "img": "auracfp.png"
+            },
+            {
+                "title": "Aura® Exterior Paint",
+                "name": "Aura® Exterior Paint",
+                "description": "Aura Exterior with our exclusive Color Lock technology provides the ultimate performance for rich, full color and unprecedented durability.",
+                "features": [
+                    "Proprietary Color Lock® technology for richer colors and superior fade resistance",
+                    "High build formula provides for extreme hide and coverage for fewer coats",
+                    "Outstanding durability against even the harshest weather conditions",
+                    "Lifetime Limited Warranty",
+                    "Low-temperature application to extend the painting season",
+                    "Superior adhesion",
+                    "Fast drying and quick re-coat times",
+                    "Mildew resistant",
+                    "Self-priming in most situations"
+                ],
+                "img": "auraef.png"
+            },
+            {
+                "title": "ben® Premium Waterborne Exterior Paint",
+                "name": "ben® Exterior Paint",
+                "description": "ben Exterior is user-friendly paint for flawless results and beautiful transformations.",
+                "features": [
+                    "Easy application for beautiful transformations",
+                    "Good coverage and durability",
+                    "Resistant to peeling, cracking, and blistering",
+                    "Low temperature application down to 40°F ( 4.4° C)",
+                    "Excellent color retention",
+                    "Mildew resistant",
+                    "25-year warranty"
+                ],
+                "img": "benef.png"
+            },
+            {
+                "title": "Floor & Patio Latex Enamels",
+                "name": "Floor & Patio Latex Enamels",
+                "description": "A premium quality, quick-drying latex floor enamel with great color and gloss retention that can be used for interior or exterior surfaces.",
+                "features": [
+                    "Easy application – Goes on Smoothly",
+                    "Resistant to soaps and detergents, grease and oil",
+                    "Durable Finish – Resists marring and scratching and delivers lasting finish",
+                    "Low Odor/Low VOC – Environmentally friendly",
+                    "Interior/Exterior Use – Can be used over multiple substrates",
+                    "Particularly recommended for basements, porches, patios, breezeways, showrooms, and light industrial applications."
+                ],
+                "img": "floorsandpatioshg.png"
+            },
+            {
+                "title": "Impervex® Latex High Gloss Enamel",
+                "name": "Impervex® Latex High Gloss",
+                "description": "Quick-drying, high gloss enamel providing outstanding rust inhibition with excellent color retention and weather resistance.",
+                "features": [
+                    "For exterior or interior use",
+                    "100% Acrylic",
+                    "Excellent gloss & colour retention",
+                    "Excellent adhesion",
+                    "Tough durable film",
+                    "Soap-and-water cleanup",
+                    "Fast drying time"
+                ],
+                "img": "impervexhg.png"
+            },
+            {
+                "title": "Regal® Select Exterior High Build",
+                "name": "Regal® Select Exterior High Build Paint",
+                "description": "Regal Select Exterior High Build offers optimum coverage for added protection and durability in fewer coats.",
+                "features": [
+                    "Durable finish resists fading, cracking and peeling so your home's exterior looks freshly painted for years to come",
+                    "Applies easily and smoothly",
+                    "Mildew resistant even in humid conditions",
+                    "Low temperature application (to 40°F) extends the painting season",
+                    "Ideal when you need high build for superior coverage and fewer coats",
+                    "Ideal when you need A Flat finish for a smooth, non-reflective finish that hides imperfections while delivering an ultra-smooth appearance"
+                ],
+                "img": "regalselecthbf.png"
+            },
+            {
+                "title": "Regal® Select Exterior Paint",
+                "name": "Regal® Select Exterior Paint",
+                "description": "Regal Select Exterior adheres beautifully to hard-to-coat surfaces creating a durable, robust finish.",
+                "features": [
+                    "Durable finish resists fading, cracking and peeling so your home's exterior looks freshly painted for years to come",
+                    "Mildew resistant even in humid conditions",
+                    "Low temperature application (to 40°F) extends the painting season",
+                    "Ideal when you need:",
+                    "Advanced alkyd technology for superior adhesion even to hard to coat surfaces",
+                    "A Soft Gloss finish that's shiny and durable – great for windows, shutters, doors and other trim work"
+                ],
+                "img": "regalselectef.png"
+            },
+            {
+                "title": "Regal® Select Exterior REVIVE® for Vinyl Siding",
+                "name": "Regal® Select Exterior REVIVE® for Vinyl Siding",
+                "description": "Regal Select REVIVE is specially formulated for optimal performance on vinyl siding and trim, for a fresh look in a wide range of colors.",
+                "features": [
+                    "Superior adhesion with Vinyl Lock technology to safely refresh the look and color of your home",
+                    "Durable finish to resist fading, cracking and peeling",
+                    "Paint and Primer together",
+                    "A wide selection of colors formulated to be safe for vinyl and resist buckling even in darker shades",
+                    "Ideal when you need:",
+                    "Complete confidence that the paint will adhere and last on vinyl siding and trim",
+                    "Available in hundreds of colors that are safe for vinyl"
+                ],
+                "img": "regalselectrevivell.png"
+            },
+            {
+                "title": "Benjamin Moore Studio Finishes®",
+                "name": "studio finishes®",
+                "description": "Studio Finishes are creative glazes, metallics, faux finishes and unique effects that transform surfaces into works of art.",
+                "features": [
+                    "A topcoat that turns virtually any interior surface into a chalkboard",
+                    "Applies easily and is washable",
+                    "Spatter resistant",
+                    "Dries quickly to a decorative finish that is extremely durable",
+                    "Formulated to minimize lingering odors"
+                ],
+                "img": "studiofinishessg.png"
+            }
+            
+        ]},
+        {"title":"stain", 
+         "paints": [
+            {
+                "title": "ARBORCOAT® Premium Exterior Stain",
+                "name": "ARBORCOAT® Exterior Stain",
+                "description": "ARBORCOAT stains offer superior protection while enhancing the texture and grain of wood surfaces.",
+                "features": [
+                    "Provides protection while allowing all of the natural beauty of the wood grain pattern and texture to show through",
+                    "Suitable for use on all types of wooden decking, siding and furniture",
+                    "Superior UV protection",
+                    "Resists blistering, peeling, stains, and scuffs",
+                    "Mildew resistant",
+                    "May be applied to both soft and hardwoods",
+                    "Available in six ready mix colors: Natural (10), Redwood (20), Teak (30), Cedar (40), Mahogany (60), Silver Gray (70)"
+                ],
+                "img": "arborcoatf.png"
+            },
+            {
+                "title": "Ultra Spec® Exterior Acrylic Solid Color Stain",
+                "name": "Ultra Spec® Exterior Acrylic Solid Color Stain",
+                "description": "Ultra Spec EXT Acrylic Solid Color Stain is designed for use on exterior siding and trim surfaces where a rustic flat finish is desired.",
+                "features": [
+                    "Quality acrylic latex stain with a rustic flat finish",
+                    "Breathable surface for maximum durability",
+                    "Compatible with Gennex® colorants",
+                    "Excellent hiding and adhesion",
+                    "Specially formulated to resist mildew growth on the stain film",
+                    "Resistant to blistering",
+                    "Soap and water clean up",
+                    "Fade resistant",
+                    "Easy application",
+                    "Recommended for application to exterior surfaces such as new or previously painted wood, hardboard, fiber cement, masonry, and unglazed brick."
+                ],
+                "img": "ultraspecf.png"
+            }
+        ]}
+    ]
+}

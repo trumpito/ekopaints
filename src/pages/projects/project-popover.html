@@ -1,0 +1,13 @@
+<ion-content>
+    <ion-list>
+        <ng-container *ngFor="let project of projects">
+        <ion-item  class="projectOption" tappable (click)="type == 'color'? project.hasColor? removeColor(project.project): addColor(project.project) : project.hasPicture? removePicture(project.project): addPicture(project.project)">
+            <ion-icon name="radio-button-{{type == 'color'? project.hasColor? 'on':'off' : project.hasPicture? 'on':'off'}}" color="pink" item-start></ion-icon>
+            <ion-label>{{project.hasColor || project.hasPicture? 'Remove from '+project.project.name: 'Add to '+project.project.name}}</ion-label>
+        </ion-item>
+        </ng-container>
+        <ion-item class="projectOption" tappable (click)="createProject()" color="primary">
+            <ion-label>Add To New Project</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,27 @@
+page-stylebooks {
+    .header.main-header{
+        .toolbar-background {
+            background-image: url('../assets/img/bg/stylebooks-bg.jpeg');
+        }
+        .toolbar, .toolbar-md, .toolbar-ios, .toolbar-wp {
+            .toolbar-circle{
+                img.toolbar-circle-img {
+                    transform:translate(-50%, -55%) !important;
+                }
+            } 
+        }
+    }
+    .content {   
+        .col{
+            .stylebook{
+                box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.75);
+                padding:5px;
+                cursor: pointer;
+            }
+            &:nth-child(odd):last-child{
+                margin:auto;
+            }
+            padding:10px;
+        }
+    }
+}
